@@ -27,7 +27,7 @@ export const HomeSection = () => {
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a href="#projects" className="cosmic-button">
-              Descargar CV
+              Mis proyectos
             </a>
           </div>
         </div>
