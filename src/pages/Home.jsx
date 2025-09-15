@@ -3,18 +3,22 @@ import { StarBackground } from "../components/StarBackground"
 import { NavBar } from "../components/NavBar"
 import { HomeSection } from "../components/HomeSection"
 import { AboutSection } from "../components/AboutSection"
+import { SkillsSection } from "../components/SkillsSection"
+import { ProjectsSection } from "../components/ProjectsSection"
+
 
 export const Home = () =>{
     return <div className="min-h-screen text-foreground overflow-x-hidden">
          <ThemeToggle />
          <StarBackground />
          <NavBar />
-         <HomeSection />
-         <AboutSection />
+         <main>
+             <HomeSection />
+            <AboutSection />
+            <SkillsSection />
+            <ProjectsSection />
+            
+         </main>
         
-
-
-
-
     </div>
 }
