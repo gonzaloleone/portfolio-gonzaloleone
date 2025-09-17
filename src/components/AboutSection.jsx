@@ -30,7 +30,8 @@ export const AboutSection = () => {
               </a>
 
               <a
-                href=""
+                href="/public/media/CV Actualizado-Gonzalo Leone.pdf"
+                download="Gonzalo-Leone-CV.pdf"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 Descargar CV
@@ -47,7 +48,7 @@ export const AboutSection = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg"> Professional Developer (Certified Tech Developer)</h4>
                   <p className="text-muted-foreground">
-                    Diseñado por Mercado Libre y Globant, dictado por Digital House
+                    Creado por Mercado Libre y Globant, dictado por Digital House
                   </p>
                 </div>
               </div>
