@@ -2,6 +2,8 @@ import { ArrowDown, Github, Linkedin } from "lucide-react";
 import fotoPortada from "/public/media/foto-portada.jpeg";
 
 export const HomeSection = () => {
+
+  
   return (
     <section
       id="home"

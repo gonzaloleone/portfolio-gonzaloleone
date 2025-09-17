@@ -16,83 +16,82 @@ export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  
-  return (
-    <nav
-      className={cn(
-        "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
-      )}
-    >
-      <div className="container flex items-center justify-between">
-        <a
-          className="text-xl font-bold text-primary flex items-center"
-          href="#home"
-        >
-          <span className="relative z-10">
-            <span className="text-glow text-foreground"> Portfolio </span>{" "}
-            Gonzalo
-          </span>
-        </a>
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "";
+  }, [isMenuOpen]);
 
-        {/* desktop nav */}
-        <div className="hidden md:flex items-center space-x-8">
-          {navItems.map((item, key) => (
+  return (
+  <nav
+    className={cn(
+      "fixed top-0 left-0 w-full transition-colors duration-300",
+      isScrolled && !isMenuOpen
+        ? "bg-background/80 backdrop-blur-md shadow-xs z-40"
+        : "bg-transparent z-40"
+    )}
+    style={{ height: "64px" }}
+  >
+    <div className="container flex items-center justify-between h-full">
+      <a
+        className="text-xl font-bold text-primary flex items-center"
+        href="#home"
+      >
+        <span className="relative z-10">
+          <span className="text-glow text-foreground">Portfolio</span> Gonzalo
+        </span>
+      </a>
+
+      {/* Desktop */}
+      <div className="hidden md:flex items-center space-x-8">
+        {navItems.map((item) => (
+          <a
+            key={item.href}
+            href={item.href}
+            className="text-foreground/80 hover:text-primary transition-colors duration-300"
+          >
+            {item.name}
+          </a>
+        ))}
+        <ThemeToggle />
+      </div>
+
+      {/* Botón móvil */}
+      <button
+        onClick={() => setIsMenuOpen((prev) => !prev)}
+        className="md:hidden p-2 text-foreground z-60"
+        aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+      >
+        {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
+      {/* Menú móvil */}
+      <div
+        className={cn(
+          "fixed inset-0 bg-black/70 backdrop-blur-md z-50 transition-opacity duration-300 md:hidden",
+          isMenuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        )}
+      >
+        <div className="min-h-screen w-full flex flex-col items-center justify-center space-y-8 text-xl">
+          {navItems.map((item) => (
             <a
-              key={key}
+              key={item.href}
               href={item.href}
               className="text-foreground/80 hover:text-primary transition-colors duration-300"
+              onClick={() => setIsMenuOpen(false)}
             >
               {item.name}
             </a>
           ))}
           <ThemeToggle />
         </div>
-
-        {/* mobile nav */}
-
-        <button
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="md:hidden p-2 text-foreground z-50"
-          aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
-        </button>
-
-        <div
-          className={cn(
-            "fixed inset-0 bg-background/95 backdroup-blur-md z-40 flex flex-col items-center justify-center",
-            "transition-all duration-300 md:hidden",
-            isMenuOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
-          )}
-        >
-          <div className="flex flex-col space-y-8 text-xl">
-            {navItems.map((item, key) => (
-              <a
-                key={key}
-                href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
-            <div className="pt-4">
-            <ThemeToggle />
-            </div>
-          </div>
-        </div>
       </div>
-    </nav>
-  );
+    </div>
+  </nav>
+);
 };
