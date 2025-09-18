@@ -3,39 +3,49 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "Proyecto 1",
-    description: "Breve descripcion del proyecto",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
+    title: "GL Indumentaria",
+    description: "Pagina web simulando una tienda de ropa. La misma cuenta con productos extraidos de firebase, imagenes, detalle de cada producto, carrito de compra y formulario de datos.",
+    image: "/media/proyecto-1.png",
+    tags: ["React", "Javascrpit"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/gonzaloleone/ProyectoFinal-Leone",
   },
   {
     id: 2,
-    title: "Proyecto 2",
+    title: "Catering Link",
     description:
-      "Breve descripcion del proyecto",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
+      "Proyecto final de cursada en Certified Tech Developer simulando una pagina de servicios y contratación de catering. Participación en el repo de backend. La misma cuenta con creación y registro de usuario, usuario administrador con funciones especiales, sección favoritos, filtrado y busqueda de productos, categorías, reserva con calendario, etc.",
+    image: "/media/proyecto-2.png",
+    tags: ["React", "Javascrpit", "Node.js", "Express", "MySQL"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Lu-GQ/ProyectoIntegrador1",
   },
   {
     id: 3,
-    title: "Proyecto 3",
+    title: "Clínica Odontológica",
     description:
-      "Breve descripcion del proyecto",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
+      "Falta agregar breve descripcion del proyecto",
+    image: "/media/proyecto-3.png",
+    tags: ["Java", "Spring Boot", "JUnit"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/gonzaloleone/Leone-Gonzalo_Dubois-Felipe",
+  },
+  {
+    id: 4,
+    title: "Clínica Médica",
+    description:
+      "Falta agregar breve descripcion del proyecto",
+    image: "/media/proyecto-4.png",
+    tags: ["React", "Javascript",],
+    demoUrl: "#",
+    githubUrl: "https://github.com/gonzaloleone/ctd-esp-fe3-final",
   },
 ];
 
 export const ProjectsSection = () => {
   return (
     <section id="projects" className="py-24 px-4 relative">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-4xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           {" "}
           Mis <span className="text-primary"> Proyectos </span>
@@ -45,7 +55,7 @@ export const ProjectsSection = () => {
           Algunos de los proyectos que fui haciendo a lo largo de mi trayectoria.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, key) => (
             <div
               key={key}
