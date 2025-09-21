@@ -82,7 +82,7 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium"> Locación</h4>
                   <a className="text-muted-foreground hover:text-primary transition-colors">
-                    Argentina, Buenos Aires
+                    Buenos Aires, Argentina
                   </a>
                 </div>
               </div>

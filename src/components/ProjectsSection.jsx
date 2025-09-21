@@ -1,10 +1,11 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const projects = [
   {
     id: 1,
     title: "GL Indumentaria",
-    description: "Pagina web simulando una tienda de ropa. La misma cuenta con productos extraidos de firebase, imagenes, detalle de cada producto, carrito de compra y formulario de datos.",
+    description: "Página web simulando una tienda de ropa. La misma cuenta con productos extraidos de firebase, imagenes, detalle de cada producto, carrito de compra y formulario de datos.",
     image: "/media/proyecto-1.png",
     tags: ["React", "Javascrpit"],
     demoUrl: "#",
@@ -14,7 +15,7 @@ const projects = [
     id: 2,
     title: "Catering Link",
     description:
-      "Proyecto final de cursada en Certified Tech Developer simulando una pagina de servicios y contratación de catering. Participación en el repo de backend. La misma cuenta con creación y registro de usuario, usuario administrador con funciones especiales, sección favoritos, filtrado y busqueda de productos, categorías, reserva con calendario, etc.",
+      "Proyecto final de cursada en Certified Tech Developer simulando una página de servicios y contratación de catering. Participación en el repo de backend. La misma cuenta con creación y registro de usuario, usuario administrador con funciones especiales, sección favoritos, filtrado y busqueda de productos, categorías, reserva con calendario, etc.",
     image: "/media/proyecto-2.png",
     tags: ["React", "Javascrpit", "Node.js", "Express", "MySQL"],
     demoUrl: "#",
@@ -22,19 +23,19 @@ const projects = [
   },
   {
     id: 3,
-    title: "Clínica Odontológica",
+    title: "Clínica Odontológica Back",
     description:
-      "Falta agregar breve descripcion del proyecto",
+      "ABM de pacientes y odontólogos. Login, asignacion y consultas de turnos. Clases de negocio, servicio y controllers. Utilización de ORM. Invocación de API. Testeos.",
     image: "/media/proyecto-3.png",
-    tags: ["Java", "Spring Boot", "JUnit"],
+    tags: ["Java", "Spring Boot", "Maven", "JUnit"],
     demoUrl: "#",
     githubUrl: "https://github.com/gonzaloleone/Leone-Gonzalo_Dubois-Felipe",
   },
   {
     id: 4,
-    title: "Clínica Médica",
+    title: "Clínica Odontológica Front",
     description:
-      "Falta agregar breve descripcion del proyecto",
+      "Página web simulando grilla de una clínica médica. La misma cuenta con navegación por distantas rutas, cards de médicos con detalle, sección 'favoritos', sección de contacto con uso del localStorage, modo oscuro y claro.",
     image: "/media/proyecto-4.png",
     tags: ["React", "Javascript",],
     demoUrl: "#",
@@ -42,7 +43,22 @@ const projects = [
   },
 ];
 
+
+
 export const ProjectsSection = () => {
+  const { toast } = useToast(); // 👈 hook del sistema de toast
+
+  const handleDemoClick = (e, url) => {
+    if (url === "#") {
+      e.preventDefault();
+      toast({
+        title: "🚧 DEMO EN REFACCIÓN",
+        description: "El código y demo del proyecto esta en mejora. Fecha para ver la demo terminada: 27/09/2025",
+        className: "bg-red-600 text-white border border-red-700", 
+      });
+    }
+  };
+
   return (
     <section id="projects" className="py-24 px-4 relative">
       <div className="container mx-auto max-w-4xl">
@@ -87,6 +103,7 @@ export const ProjectsSection = () => {
                     <a
                       href={project.demoUrl}
                       target="_blank"
+                      onClick={(e) => handleDemoClick(e, project.demoUrl)}
                       className="text-foreground/80 hover:text-primary transition-colors duration-300"
                     >
                       <ExternalLink size={20} />
