@@ -27,7 +27,7 @@ const projects = [
     description:
       "ABM de pacientes y odontólogos. Login, asignacion y consultas de turnos. Clases de negocio, servicio y controllers. Utilización de ORM. Invocación de API. Testeos.",
     image: "/media/proyecto-3.png",
-    tags: ["Java", "Spring Boot", "Maven", "JUnit"],
+    tags: ["Java", "Spring Boot", "JPA", "JUnit"],
     demoUrl: "#",
     githubUrl: "https://github.com/gonzaloleone/Leone-Gonzalo_Dubois-Felipe",
   },
@@ -53,7 +53,7 @@ export const ProjectsSection = () => {
       e.preventDefault();
       toast({
         title: "🚧 DEMO EN REFACCIÓN",
-        description: "El código y demo del proyecto esta en mejora. Fecha para ver la demo terminada: 27/09/2025",
+        description: "El código y demo del proyecto esta en mejora. Fecha para ver la demo terminada: 05/10/2025",
         className: "bg-red-600 text-white border border-red-700", 
       });
     }

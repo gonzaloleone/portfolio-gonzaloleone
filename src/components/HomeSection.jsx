@@ -10,7 +10,6 @@ export const HomeSection = () => {
       className="relative min-h-screen flex flex-col items-center justify-center px-4"
     >
       <div className="container max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 z-10">
-        {/* Columna de texto (título, párrafo y botón) */}
         <div className="flex flex-col text-center md:text-left md:basis-2/3 space-y-6">
           {/* Título */}
           <h1 className="text-4xl md:text-[3.50rem] font-bold tracking-tight order-1">
@@ -28,7 +27,6 @@ export const HomeSection = () => {
           {/* Imagen - en móvil debe aparecer entre título y texto */}
           <div className="flex justify-center md:hidden order-2 animate-fade-in-delay-2">
             <div className="relative w-40 h-40">
-              {/* halo difuminado detrás de la imagen */}
               <div
                 className="absolute inset-0 rounded-full blur-3xl scale-105 pointer-events-none"
                 style={{ background: "hsl(var(--primary) / 0.18)" }}
