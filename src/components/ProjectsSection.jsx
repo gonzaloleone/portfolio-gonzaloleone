@@ -46,14 +46,14 @@ const projects = [
 
 
 export const ProjectsSection = () => {
-  const { toast } = useToast(); // 👈 hook del sistema de toast
+  const { toast } = useToast(); 
 
   const handleDemoClick = (e, url) => {
     if (url === "#") {
       e.preventDefault();
       toast({
         title: "🚧 DEMO EN REFACCIÓN",
-        description: "El código y demo del proyecto esta en mejora. Fecha para ver la demo terminada: 05/10/2025",
+        description: "El código y demo del proyecto esta en mejora. Fecha para ver la demo terminada: 12/10/2025",
         className: "bg-red-600 text-white border border-red-700", 
       });
     }
