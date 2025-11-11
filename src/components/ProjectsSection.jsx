@@ -53,7 +53,7 @@ export const ProjectsSection = () => {
       e.preventDefault();
       toast({
         title: "🚧 DEMO EN REFACCIÓN",
-        description: "El código y demo del proyecto esta en mejora. Fecha para ver la demo terminada: 12/10/2025",
+        description: "La demo del proyecto esta en mejora. Código disponible en Github!",
         className: "bg-red-600 text-white border border-red-700", 
       });
     }
