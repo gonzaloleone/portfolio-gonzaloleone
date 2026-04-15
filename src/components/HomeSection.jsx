@@ -11,7 +11,6 @@ export const HomeSection = () => {
     >
       <div className="container max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 z-10">
         <div className="flex flex-col text-center md:text-left md:basis-2/3 space-y-6">
-          {/* Título */}
           <h1 className="text-4xl md:text-[3.50rem] font-bold tracking-tight order-1">
             <span className="opacity-0 animate-fade-in">Hola, soy</span>
             <span className="text-primary opacity-0 animate-fade-in-delay-1">
@@ -24,7 +23,6 @@ export const HomeSection = () => {
             </span>
           </h1>
 
-          {/* Imagen - en móvil debe aparecer entre título y texto */}
           <div className="flex justify-center md:hidden order-2 animate-fade-in-delay-2">
             <div className="relative w-40 h-40">
               <div
@@ -39,20 +37,16 @@ export const HomeSection = () => {
             </div>
           </div>
 
-          {/* Texto */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto md:mx-0 opacity-0 animate-fade-in-delay-3 order-3">
             Desarrollador Full Stack. Aplico soluciones estratégicas y efectivas
             para el entorno web actual, optimizo tiempos de desarrollo y colaboro en equipos multidisciplinarios para alcanzar metas definidas.
           </p>
 
-          {/* Botón */}
           <div className="pt-2 opacity-0 animate-fade-in-delay-4 order-4">
             <div className="flex items-center justify-center md:justify-start gap-4 w-full">
-              {/* Botón */}
               <a href="#projects" className="cosmic-button">
                 Mis proyectos
               </a>
-              {/* Iconos sociales */}
               <div className="flex items-center gap-3">
                 <a
                   href="https://www.linkedin.com/in/gonzalo-leone/"
@@ -89,7 +83,6 @@ export const HomeSection = () => {
         </div>
       </div>
 
-      {/* Flecha inferior */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
         <ArrowDown className="h-10 w-10 text-primary" />
       </div>
