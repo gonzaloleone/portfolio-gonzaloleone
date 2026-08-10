@@ -33,6 +33,16 @@ const projects = [
   },
   {
     id: 4,
+    title: "MatchPoint",
+    description:
+      "Gestión de reservas deportivas y publicación de complejos. Búsqueda y filtrado de instalaciones por deporte. Sistema de login, roles de usuario y administradores. Arquitectura en capas (negocio, servicio y controllers), ORM, base de datos y diseño responsive. Testeos.",
+    image: "/media/proyecto-5.png",
+    tags: ["Python", "FastAPI", "SQLAlchemy", "MySQL", "React"],
+    demoUrl: "https://match-point-proyecto.vercel.app/",
+    githubUrl: "https://github.com/gonzaloleone/MatchPoint_Proyecto",
+},
+  /*{
+    id: 4,
     title: "Clínica Odontológica Front",
     description:
       "Página web simulando grilla de una clínica médica. La misma cuenta con navegación por distantas rutas, cards de médicos con detalle, sección 'favoritos', sección de contacto con uso del localStorage, modo oscuro y claro.",
@@ -41,6 +51,7 @@ const projects = [
     demoUrl: "#",
     githubUrl: "https://github.com/gonzaloleone/ctd-esp-fe3-final",
   },
+  */
 ];
 
 
