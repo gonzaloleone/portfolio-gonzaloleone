@@ -4,15 +4,26 @@ import { useToast } from "@/hooks/use-toast";
 const projects = [
   {
     id: 1,
-    title: "GL Indumentaria",
-    description: "Página web simulando una tienda de ropa. La misma cuenta con productos extraidos de firebase, imagenes, detalle de cada producto, carrito de compra y formulario de datos.",
-    image: "/media/proyecto-1.png",
-    tags: ["React", "Javascrpit"],
-    demoUrl: "#",
-    githubUrl: "https://github.com/gonzaloleone/ProyectoFinal-Leone",
+    title: "MatchPoint",
+    description:
+      " (La primera petición a la bdd en la demo puede demorar hasta 1 minuto). Gestión de reservas deportivas y publicación de complejos. Búsqueda y filtrado de instalaciones por deporte. Sistema de login, roles de usuario y administradores. Arquitectura en capas (negocio, servicio y controllers), ORM, base de datos y diseño responsive. Testeos.",
+    image: "/media/proyecto-5.png",
+    tags: ["Python", "FastAPI", "SQLAlchemy", "MySQL", "React"],
+    demoUrl: "https://match-point-proyecto.vercel.app/",
+    githubUrl: "https://github.com/gonzaloleone/MatchPoint_Proyecto",
   },
   {
     id: 2,
+    title: "GL Indumentaria",
+    description:
+      "E-Commerce SPA moderno y responsivo para tienda de indumentaria. Cuenta con catálogo dinámico sincronizado con Firebase Firestore, modo oscuro/claro, búsqueda en tiempo real y filtrado por precio/stock. Incluye selección de talles, calificaciones con estrellas, carrito avanzado con cupones promocionales y calculadora de envío, además de un proceso de checkout realista con múltiples métodos de pago y comprobante de compra digital.",
+    image: "/media/proyecto-1.png",
+    tags: ["React", "Firebase", "CSS3", "JavaScript"],
+    demoUrl: "https://gl-indumentaria.vercel.app/",
+    githubUrl: "https://github.com/gonzaloleone/ProyectoFinal-Leone",
+  },
+  {
+    id: 3,
     title: "Catering Link",
     description:
       "Proyecto final de cursada en Certified Tech Developer simulando una página de servicios y contratación de catering. Participación en el repo de backend. La misma cuenta con creación y registro de usuario, usuario administrador con funciones especiales, sección favoritos, filtrado y busqueda de productos, categorías, reserva con calendario, etc.",
@@ -22,7 +33,7 @@ const projects = [
     githubUrl: "https://github.com/Lu-GQ/ProyectoIntegrador1",
   },
   {
-    id: 3,
+    id: 4,
     title: "Clínica Odontológica Back",
     description:
       "ABM de pacientes y odontólogos. Login, asignacion y consultas de turnos. Clases de negocio, servicio y controllers. Utilización de ORM. Invocación de API. Testeos.",
@@ -31,16 +42,6 @@ const projects = [
     demoUrl: "#",
     githubUrl: "https://github.com/gonzaloleone/Leone-Gonzalo_Dubois-Felipe",
   },
-  {
-    id: 4,
-    title: "MatchPoint",
-    description:
-      "Gestión de reservas deportivas y publicación de complejos. Búsqueda y filtrado de instalaciones por deporte. Sistema de login, roles de usuario y administradores. Arquitectura en capas (negocio, servicio y controllers), ORM, base de datos y diseño responsive. Testeos.",
-    image: "/media/proyecto-5.png",
-    tags: ["Python", "FastAPI", "SQLAlchemy", "MySQL", "React"],
-    demoUrl: "https://match-point-proyecto.vercel.app/",
-    githubUrl: "https://github.com/gonzaloleone/MatchPoint_Proyecto",
-},
   /*{
     id: 4,
     title: "Clínica Odontológica Front",
@@ -57,7 +58,7 @@ const projects = [
 
 
 export const ProjectsSection = () => {
-  const { toast } = useToast(); 
+  const { toast } = useToast();
 
   const handleDemoClick = (e, url) => {
     if (url === "#") {
@@ -65,7 +66,7 @@ export const ProjectsSection = () => {
       toast({
         title: "🚧 DEMO EN REFACCIÓN",
         description: "La demo del proyecto esta en mejora. Código disponible en Github!",
-        className: "bg-red-600 text-white border border-red-700", 
+        className: "bg-red-600 text-white border border-red-700",
       });
     }
   };
