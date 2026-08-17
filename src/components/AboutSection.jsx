@@ -15,12 +15,12 @@ export const AboutSection = () => {
               Apasionado desarrollador de software
             </h3>
 
-            <p className="text-muted-foreground">
-              Desarrollo proyectos de forma independiente, donde generalmente aplico tecnologías como JavaScript, Node.js y Express.js, React, y bases de datos como MySQL. Esto me ha permitido fortalecer tanto mis habilidades técnicas como la organización y gestión de tiempos.
+            <p className="text-muted-foreground leading-relaxed">
+              Desarrollo soluciones tecnológicas de forma independiente, diseñando e implementando aplicaciones con tecnologías como <strong>JavaScript, Python, React, Node.js, Express.js</strong> y bases de datos relacionales como <strong>MySQL</strong>. Además, integro herramientas de <strong>Inteligencia Artificial</strong> para optimizar procesos y potenciar el rendimiento de cada solución, lo que ha consolidado tanto mis competencias técnicas como mi capacidad de gestión y organización de proyectos.
             </p>
 
-            <p className="text-muted-foreground">
-              Busco integrarme a un equipo de desarrollo en el ámbito corporativo, donde pueda seguir aprendiendo, aportar valor y crecer profesionalmente. Me motiva la mejora continua, el trabajo colaborativo y los desafíos que implican crear soluciones de calidad.
+            <p className="text-muted-foreground leading-relaxed">
+              Busco integrarme a un equipo de desarrollo en el ámbito corporativo, donde pueda aportar valor técnico, colaborar activamente y continuar mi crecimiento profesional. Me motiva la mejora continua, el trabajo en equipo y el desafío constante de desarrollar software escalable y de alta calidad.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -59,9 +59,22 @@ export const AboutSection = () => {
                   <Code className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Curso Front-End Developer</h4>
+                  <h4 className="font-semibold text-lg">Curso Inteligencia Artificial para Programadores</h4>
                   <p className="text-muted-foreground">
-                    UTN (Extensión Universitaria)
+                    UTN (Centro de e-Lerning)
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="gradient-border p-6 card-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Code className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-left">
+                  <h4 className="font-semibold text-lg">Cuso Desarrollo Web con Javascript</h4>
+                  <p className="text-muted-foreground">
+                    UTN (Centro de e-Lerning)
                   </p>
                 </div>
               </div>
@@ -73,9 +86,9 @@ export const AboutSection = () => {
                 </div>
 
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Cuso Desarrollo Web con Javascript</h4>
+                  <h4 className="font-semibold text-lg">Curso Front-End Developer</h4>
                   <p className="text-muted-foreground">
-                    UTN (Centro de e-Lerning)
+                    UTN (Extensión Universitaria)
                   </p>
                 </div>
               </div>
